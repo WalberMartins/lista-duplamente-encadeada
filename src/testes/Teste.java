@@ -13,11 +13,7 @@ public class Teste {
 		lista.add("t");
 		lista.add("q");
 		
-		for(int i = 0; i < lista.size(); i++) {
-			System.out.println(lista.get(i));
-		}
-		System.out.println();
-		System.out.println(lista);
+		lista.add(1, "s0");
 		
 
 

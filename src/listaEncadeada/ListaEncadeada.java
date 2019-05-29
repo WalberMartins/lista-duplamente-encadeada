@@ -66,7 +66,7 @@ public class ListaEncadeada<T>
 			Celula anterior = getCelula(posicao - 1);
 			atual.setAnterior(nova);
 			nova.setAnterior(anterior);
-			nova.setProxima(anterior.getProxima());
+			nova.setProxima(atual);
 			anterior.setProxima(nova);
 			tamanho++;
 		}
@@ -126,7 +126,7 @@ public class ListaEncadeada<T>
 		if(posicao == 0)
 			return removeFirst();
 		Celula anterior = getCelula(posicao - 1);
-		Celula excluida = anterior.getProxima();
+		Celula excluida = getCelula(posicao);
 		T excluido = (T) excluida.getElemento();
 		if(!(excluida == ultima)) {
 			Celula proxima = getCelula(posicao + 1);
