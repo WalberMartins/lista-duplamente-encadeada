@@ -75,10 +75,19 @@ public class Programa {
 				else
 					System.out.printf("O número %d não está na lista.%n", numero);
 				break;
-			case 2: 
+			case 2:
+				System.out.print("lista: ");
+				for(int i = 0; i < lista.size() - 1; i++) {
+					System.out.print(""+lista.get(i)+", ");
+				}
+				System.out.print(""+lista.get(lista.size()-1)+"\n");
 				break;
 			case 3:
-				
+				System.out.print("lista: ");
+				for(int i = 0; i < lista.size() - 1; i++) {
+					System.out.print(""+lista.getEnd(i)+", ");
+				}
+				System.out.print(""+lista.getEnd(lista.size()-1)+"\n");
 			}
 			break;
 		case 0:
@@ -88,5 +97,4 @@ public class Programa {
 			System.out.println("Opção inválida. Tente Novamente:");
 		}
 	}
-	
 }

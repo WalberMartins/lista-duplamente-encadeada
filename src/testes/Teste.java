@@ -13,7 +13,9 @@ public class Teste {
 		lista.add("t");
 		lista.add("q");
 		
-		lista.add(1, "s0");
+		for(int i = 0; i < lista.size(); i++) {
+			System.out.println(lista.getEnd(i));
+		}
 		
 
 

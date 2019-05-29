@@ -98,6 +98,15 @@ public class ListaEncadeada<T>
 		catch (IllegalArgumentException e) {throw e;}
 	}
 	
+	@SuppressWarnings("unchecked")
+	public T getEnd(int posicao) {
+		Celula celula = this.ultima;
+		for(int i = 0; i < posicao; i++) {
+			celula = celula.getAnterior();
+		}
+		return (T) celula.getElemento();	
+	}
+	
 	private Celula getCelula(int posicao) throws IllegalArgumentException
 	{
 		if(!posicaoOcupada(posicao))
